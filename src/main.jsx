@@ -7,6 +7,8 @@ import Mainlayout from './Components/MainLayout/Mainlayout';
 import Home from './Components/Home/Home';
 import UserDetails from './Components/UserDetails/UserDetails';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
+import Timeline from './Components/Timeline/Timeline';
+import Stats from './Components/Stats/Stats';
 
 
 const router = createBrowserRouter([
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
         path:"/userdetails",
         element: <UserDetails></UserDetails>
       },
+      {
+        path:"/timeline",
+        element:<Timeline></Timeline>
+      },
+      {
+        path:"/stats",
+        element:<Stats></Stats>
+      }
     ],
     errorElement: <ErrorPage></ErrorPage>
   },
