@@ -14,7 +14,7 @@ const AllUsers = () => {
     {
       users.map((user) => {
         return (
-          <div key={user.id}>
+          <div key={user.id} className='mb-3'>
             <div className="card bg-base-100 w-full shadow-sm">
               <figure>
                 <img className='w-[200px] border-0 rounded-full mt-[20px]'
