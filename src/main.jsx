@@ -6,6 +6,7 @@ import { RouterProvider } from 'react-router/dom';
 import Mainlayout from './Components/MainLayout/Mainlayout';
 import Home from './Components/Home/Home';
 import UserDetails from './Components/UserDetails/UserDetails';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
         path:"/userdetails",
         element: <UserDetails></UserDetails>
       },
-    ]
+    ],
+    errorElement: <ErrorPage></ErrorPage>
   },
 
 ]);
