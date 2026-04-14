@@ -17,6 +17,23 @@ const UserDetails = () => {
   const users = use(userPromise);
   const user = users.find(u => u.id == id);
 
+
+  const handleAction = (type) => {
+  const newActivity = {
+    id: Date.now(),
+    name: user.name,
+    type: type, 
+    date: new Date().toLocaleString()
+  };
+
+  const oldData = JSON.parse(localStorage.getItem("timeline")) || [];
+  const updated = [newActivity, ...oldData];
+
+  localStorage.setItem("timeline", JSON.stringify(updated));
+
+  
+};
+
   return (
     <div className="bg-base-200 min-h-screen py-10 px-4 pt-30">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -95,9 +112,19 @@ const UserDetails = () => {
             <h3 className="font-semibold mb-4">Quick Check-In</h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <button className="btn p-12 text-xl "><MdOutlineAddIcCall /> Call</button>
-              <button className="btn p-12 text-xl "><MdTextsms />  Text</button>
-              <button className="btn p-12 text-xl"><MdOutlineVideocam />  Video</button>
+          
+
+              <button onClick={() => handleAction("call")} className="btn p-12 text-xl">
+  <MdOutlineAddIcCall /> Call
+</button>
+
+<button onClick={() => handleAction("text")} className="btn p-12 text-xl">
+  <MdTextsms /> Text
+</button>
+
+<button onClick={() => handleAction("video")} className="btn p-12 text-xl">
+  <MdOutlineVideocam /> Video
+</button>
             </div>
           </div>
 
