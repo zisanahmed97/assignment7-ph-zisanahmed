@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import { Link } from 'react-router';
   const userPromise = fetch("/data.json").then(res=> res.json())
 
 const AllUsers = () => {
@@ -14,7 +15,7 @@ const AllUsers = () => {
     {
       users.map((user) => {
         return (
-          <div key={user.id} className='mb-3'>
+          <Link to={`/userdetails/${user.id}`} key={user.id} className='mb-3 block'>
             <div className="card bg-base-100 w-full shadow-sm">
               <figure>
                 <img className='w-[200px] border-0 rounded-full mt-[20px]'
@@ -48,7 +49,7 @@ const AllUsers = () => {
 
               </div>
             </div>
-          </div>
+          </Link>
         );
       })
     }
