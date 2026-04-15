@@ -10,6 +10,9 @@ import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Timeline from './Components/Timeline/Timeline';
 import Stats from './Components/Stats/Stats';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const router = createBrowserRouter([
   {
@@ -46,7 +49,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
 
   <RouterProvider router={router} />,
-
+<ToastContainer />
 
 
   </StrictMode>,

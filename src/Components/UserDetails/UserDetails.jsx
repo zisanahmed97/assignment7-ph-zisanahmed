@@ -9,6 +9,8 @@ import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { FaBoxArchive } from "react-icons/fa6";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
+import { toast } from 'react-toastify';
+
 const userPromise = fetch("/data.json").then(res => res.json());
 
 const UserDetails = () => {
@@ -31,6 +33,27 @@ const UserDetails = () => {
 
   localStorage.setItem("timeline", JSON.stringify(updated));
 
+if (type === "call") {
+  toast.success(
+    <div className="flex items-center gap-2">
+      <MdOutlineAddIcCall /> Call with {user.name}
+    </div>
+  );
+} 
+else if (type === "text") {
+  toast.success(
+    <div className="flex items-center gap-2">
+      <MdTextsms /> Text with {user.name}
+    </div>
+  );
+} 
+else if (type === "video") {
+  toast.success(
+    <div className="flex items-center gap-2">
+      <MdOutlineVideocam /> Video call with {user.name}
+    </div>
+  );
+}
   
 };
 

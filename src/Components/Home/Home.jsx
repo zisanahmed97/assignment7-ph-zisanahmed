@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { FaPlus } from "react-icons/fa";
 import AllUsers from '../AllUsers/AllUsers';
+
+
+
 const Home = () => {
     return (
         <div>
@@ -58,11 +61,18 @@ relationships that matter most.
   </div>
 </div>
 
+
+
+<Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
 <div className='bg-base-200'>
     <div className=' max-w-6xl mx-auto px-4'>
     <AllUsers></AllUsers>
 </div>
 </div>
+</Suspense>
+
+
+
         </div>
     );
 };

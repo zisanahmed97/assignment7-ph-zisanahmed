@@ -102,5 +102,31 @@
     "bio": "Met through freelance projects. We often collaborate on web development and share client opportunities.",
     "goal": 10,
     "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 9,
+    "name": "Shakib Al Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/41.jpg",
+    "email": "shakib.hasan@gmail.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tag1": "cricket",
+    "tag2": "sports friend",
+    "bio": "Met at a local cricket club. We still play matches together on weekends.",
+    "goal": 14,
+    "next_due_date": "2026-04-19"
+  },
+  {
+    "id": 10,
+    "name": "Mim Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/36.jpg",
+    "email": "mim.rahman@gmail.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tag1": "university",
+    "tag2": "study partner",
+    "bio": "We prepared for exams together. She is very helpful in understanding tough topics.",
+    "goal": 10,
+    "next_due_date": "2026-04-08"
   }
 ]
