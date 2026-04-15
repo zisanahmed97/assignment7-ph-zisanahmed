@@ -3,7 +3,7 @@ import { FaHome } from 'react-icons/fa';
 import { ImStatsDots } from 'react-icons/im';
 import { RiTimeLine } from 'react-icons/ri';
 import { NavLink } from 'react-router';
-
+import logo from "../../../assets/logo.png"
 
 
 
@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="navbar bg-base-100 shadow-sm ">
   <div className="navbar-start">
    
-    <a className="btn btn-ghost text-xl"><img src="../../../assets/logo.png" alt="" /></a>
+    <a className="btn btn-ghost text-xl"><img src={logo} alt="" /></a>
   </div>
  
 

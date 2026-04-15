@@ -1,4 +1,5 @@
 import React from 'react';
+import logoxl from "../../../assets/logo-xl.png"
 
 const Footer = () => {
     return (
@@ -6,7 +7,7 @@ const Footer = () => {
             <div>
                 <footer className="footer footer-horizontal footer-center bg-[#244D3F] text-primary-content p-10  ">
   <aside>
-  <img className='pt-[40px]' src="../../../assets/logo-xl.png" alt="" />
+  <img className='pt-[40px]' src={logoxl} alt="" />
     <p>
       
      Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
